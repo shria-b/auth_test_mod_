@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "auth_test_mod",
+	"version": "${version}",
+	"name": "auth_test_mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/auth_test_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"shria.authtest.Auth_test_mod"
+		],
+		"client": [
+			"shria.authtest.Auth_test_modClient"
+		]
+	},
+	"mixins": [
+		"auth_test_mod.mixins.json",
+		{
+			"config": "auth_test_mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
